@@ -6,11 +6,11 @@ const NavBar = (props) => {
     <header>
 
       <ul>
-        <li className="navLink">
+        <li>
           <Link to="/whiskies">Whiskies</Link>
         </li>
         
-        <li className="navLink">
+        <li >
           <Link to="/distilleries">Distilleries</Link>
         </li>
         

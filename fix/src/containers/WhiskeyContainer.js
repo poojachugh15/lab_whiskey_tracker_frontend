@@ -23,18 +23,16 @@ const WhiskeyContainer = ({whiskies}) => {
        <Router>
        <>
        <Switch>
-       <Route exact path="/whiskies" render={(props) =>{
+       
+       
+      <Route exact path="/whiskies/:id" render={(props) =>{
         const id = props.match.params.id;
         const whisky = findWhiskyById(id);
-        return
-       <WhiskeyDetail whisky={whisky}/>
-        
+        return <WhiskeyDetail whisky={whisky}/>
       }}/>
-       <Route render={() => {
+      <Route render={() => {
         return <WhiskeyList whiskies={whiskies}/>
       }} />
-       <h2>WhiskeyContainer!!</h2>
-       < WhiskeyList />
        </Switch>
        </>
        </Router>

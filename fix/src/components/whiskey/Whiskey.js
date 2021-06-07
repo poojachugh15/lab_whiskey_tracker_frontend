@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 const Whiskey = ({whisky}) => {
 
     if (!whisky){
-        return <p>Loading...</p> 
+        return <p>Loading Whiskey...</p> 
     }
 
     const url = "/whiskies/" + whisky.id;

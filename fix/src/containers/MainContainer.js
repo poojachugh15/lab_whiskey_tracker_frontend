@@ -16,6 +16,7 @@ const MainContainer = () => {
 
         Promise.all([whiskeyPromise, distilleryPromise])
         .then((data) => {
+            console.log(data);
         setWhiskies(data[0]);
         setDistilleries(data[1]);
         
@@ -31,7 +32,7 @@ useEffect(()=>{
       <>
       <NavBar />
       <Switch>
-          <Route render ={() => {
+          <Route exact path="/whiskies" render ={() => {
             return <WhiskeyContainer whiskies={whiskies} distilleries={distilleries}/>
           }} />
      
