@@ -14,7 +14,7 @@ const Whiskey = ({whisky}) => {
         <>
         <Link to ={url}>
             {whisky.name}
-            {whisky.distillery}
+            {whisky.distillery.name}
         </Link>
         </>
     )
