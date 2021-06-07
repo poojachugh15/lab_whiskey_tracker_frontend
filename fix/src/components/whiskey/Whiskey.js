@@ -1,10 +1,22 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 
-const Whiskey = () => {
+const Whiskey = ({whisky}) => {
+
+    if (!whisky){
+        return <p>Loading...</p> 
+    }
+
+    const url = "/whiskies/" + whisky.id;
 
     return (
-        <h3>Whiskey!!</h3>
+        <>
+        <Link to ={url}>
+            {whisky.name}
+            {whisky.distillery}
+        </Link>
+        </>
     )
   
 }

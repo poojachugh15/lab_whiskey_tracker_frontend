@@ -11,7 +11,8 @@ const WhiskeyDetail = ({whisky}) => {
     return (
         <>
         <Whiskey whisky={whisky} />
-        <h2>whiskeyDeatils</h2>
+        <p>Year: {whisky.year}</p>
+        <p>Age: {whisky.age}</p>
         </>
     )
 }

@@ -1,10 +1,24 @@
 import React from 'react';
 import Whiskey from './Whiskey.js';
 
-const WhiskeyList = () => {
+const WhiskeyList = ({whiskies}) => {
+
+   if (whiskies.length === 0){
+       return (<p> Loading Whiskies...</p>)
+   }
+
+   const whiskyNodes = whiskies.map((whisky, index) => {
+       return (
+           <li key={index}>
+               <Whiskey whisky={whisky} />
+           </li>
+       )
+   })
 
     return (
-        <h3>WhiskeyList!!</h3>
+        <ul>
+            {whiskyNodes}
+        </ul>
     )
   
 }
